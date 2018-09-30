@@ -8,7 +8,9 @@ script:
   - yarn lint
   - yarn test
 deploy:
-  provider: script
-  script: yarn deploy
+  provider: pages
+  skip_cleanup: true
+  github_token: $github_token
+  local_dir: build
   on:
     branch: master
