@@ -6,9 +6,6 @@ script:
   - yarn lint
   - yarn test
 deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  keep-history: true
+  script: yarn deploy
   on:
     branch: master
